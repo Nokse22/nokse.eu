@@ -1,0 +1,67 @@
+---
+import { Image } from "astro:assets";
+import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = 'Nokse';
+const description = 'Portfolio Website';
+const permalink = Astro.site.href;
+---
+
+<BaseLayout title={title} description={description} permalink={permalink}>
+    <div class="splash">
+        <Image class="profile-image" alt="Profile Image" src="/assets/nokse.svg" width={300} height={300}/>
+        <h1 class="unselectable">Nokse</h1>
+    </div>
+    <div class="socials">
+        <a href="https://github.com/nokse22">
+            <Image src="/assets/icons/github.svg" alt="GNOME Gitlab" width={32} height={32}/>
+        </a>
+        <a href="https://gitlab.gnome.org/nokse22">
+            <Image src="/assets/icons/gnome.svg" alt="Github" width={32} height={32}/>
+        </a>
+        <a href="https://hachyderm.io/@nokse">
+            <Image src="/assets/icons/mastodon.svg" alt="Mastodon" width={32} height={32}/>
+        </a>
+        <a href="mailto:nokse@posteo.com">
+            <Image src="/assets/icons/mail.svg" alt="Mail" width={32} height={32}/>
+        </a>
+    </div>
+</BaseLayout>
+
+<style>
+    .splash {
+        max-width: 600px;
+        text-align: center;
+        color: var(--secondary-fg-color);
+    }
+    .profile-image {
+        width: 256px;
+        height: 256px;
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 6px;
+        transition: all ease-in-out 200ms;
+    }
+    .splash h1 {
+        text-transform: uppercase;
+        margin-top: 48px;
+    }
+    .socials a {
+      display: inline-block;
+      transition: all 300ms ease-out;
+      margin: 0.8rem;
+    }
+    .socials a:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+    .socials img {
+      filter: invert(30%);
+    }
+    @media (prefers-color-scheme: dark) {
+      .socials img {
+            filter: invert(100%);
+        }
+    }
+</style>

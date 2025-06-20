@@ -1,0 +1,61 @@
+:root {
+    --accent-blue: #3584e4;
+    --accent-teal: #2190a4;
+    --accent-green: #3a944a;
+    --accent-yellow: #c88800;
+    --accent-orange: #ed5b00;
+    --accent-red: #e62d42;
+    --accent-pink: #d56199;
+    --accent-purple: #9141ac;
+    --accent-slate: #6f8396;
+
+    --primary-bg-color: #fafafb;
+    --primary-fg-color: rgb(0 0 6 / 80%);
+
+    --secondary-bg-color: #f6f5f4;
+    --secondary-fg-color: #77767b;
+
+    --card-bg-color: #ffffff;
+    --card-fg-color: rgb(0 0 6 / 80%);
+    --card-shade-color: rgb(0 0 6 / 7%);
+
+    --text-color: black;
+
+    color: var(--text-color);
+    background: var(--primary-bg-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-bg-color: #222226;
+        --primary-fg-color: #ffffff;
+
+        --secondary-bg-color: #241f31;
+        --secondary-fg-color: #deddda;
+
+        --card-bg-color: rgb(255 255 255 / 8%);
+        --card-fg-color: #ffffff;
+        --card-shade-color: rgb(0 0 6 / 36%);
+
+        --text-color: white;
+    }
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 200ms;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
